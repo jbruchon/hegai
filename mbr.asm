@@ -1,7 +1,15 @@
 [bits 16]
 [org 0x7c00]
 
-; code goes here one day
+xor ax, ax
+mov ds, ax
+mov es, ax
+mov ss, ax
+
+mov si, MSG_HELLO
+call print
+
+; loop forever
 jmp $
 
 %include "print.asm"
