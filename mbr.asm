@@ -10,11 +10,11 @@ mov si, MSG_HELLO
 call print
 
 ; loop forever
-jmp $
+hlt
 
 %include "print.asm"
 
-MSG_HELLO db "Hello world, this is Hegai", 0
+MSG_HELLO db "Hegai boot", 13, 10, 0
 
 times 510-($-$$) db 0
 db 0x55
